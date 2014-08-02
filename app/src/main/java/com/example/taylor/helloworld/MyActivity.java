@@ -6,11 +6,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MyActivity extends ActionBarActivity {
 
     Button button;
+    EditText editText;
 
 
     @Override
@@ -19,10 +21,12 @@ public class MyActivity extends ActionBarActivity {
         setContentView(R.layout.activity_my);
 
         button= (Button) findViewById(R.id.button);
+        editText= (EditText) findViewById(R.id.editText);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println("hello You made it");
+                editText.setText("hello");
             }
         });
     }
