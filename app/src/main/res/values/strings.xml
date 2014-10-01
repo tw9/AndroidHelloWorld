@@ -7,4 +7,6 @@
     <string name="buttonOne">showText</string>
     <string name="enterString">Type your name here</string>
     <string name="button_send">Send</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+
 </resources>

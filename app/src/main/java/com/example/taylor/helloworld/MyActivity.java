@@ -1,5 +1,6 @@
 package com.example.taylor.helloworld;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +15,7 @@ public class MyActivity extends ActionBarActivity {
     Button button;
     EditText editText;
 
+    public final static String EXTRA_MESSAGE = "com.example.taylor.helloworld.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,5 +62,11 @@ public class MyActivity extends ActionBarActivity {
          editText = (EditText) findViewById(R.id.editText);
         String typeStr= String.valueOf(editText.getText());
          editText.setText("hello "+typeStr);
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        String message = String.valueOf(editText.getText());
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
+
+
 }
