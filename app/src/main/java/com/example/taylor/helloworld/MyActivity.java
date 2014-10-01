@@ -29,6 +29,8 @@ public class MyActivity extends ActionBarActivity {
                 editText.setText("hello");
             }
         });
+
+
     }
 
 
@@ -49,5 +51,14 @@ public class MyActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void clearMessage(View view){
+        editText = (EditText) findViewById(R.id.editText);
+        editText.setText("");
+    }
+    public void sendMessage(View view){
+         editText = (EditText) findViewById(R.id.editText);
+        String typeStr= String.valueOf(editText.getText());
+         editText.setText("hello "+typeStr);
     }
 }
