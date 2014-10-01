@@ -5,11 +5,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.taylor.helloworld.R;
 
 public class DisplayMessageActivity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +19,9 @@ public class DisplayMessageActivity extends ActionBarActivity {
         setContentView(R.layout.activity_display_message);
         Intent intent = getIntent();
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
-        TextView textView=new TextView(this);
+        TextView textView= (TextView) findViewById(R.id.Text2);
         textView.setText(message);
-        setContentView(textView);
-        System.out.println("the second activeity");
+        System.out.println("the second activeity : "+message);
     }
 
 
