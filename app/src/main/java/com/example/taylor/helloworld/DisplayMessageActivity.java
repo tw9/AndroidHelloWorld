@@ -22,6 +22,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
         TextView textView= (TextView) findViewById(R.id.Text2);
         textView.setText(message);
         System.out.println("the second activeity : "+message);
+
+        // enable the app icon as the up button by calling home
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 
 
@@ -39,8 +44,13 @@ public class DisplayMessageActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            openSetting();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void openSetting(){
+        TextView textView= (TextView) findViewById(R.id.Text2);
+        textView.setText("You are now useing Setting");
     }
 }

@@ -33,6 +33,7 @@ public class MyActivity extends ActionBarActivity {
         });
 
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 

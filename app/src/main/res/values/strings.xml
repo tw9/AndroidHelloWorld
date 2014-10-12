@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Hello</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">set content</string>
     <string name="action_settings">Settings</string>
     <string name="buttonOne">SetHello</string>
     <string name="enterString">Type your name here</string>
